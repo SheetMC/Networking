@@ -1,5 +1,5 @@
 /*
- *     SheetMC Protocol: settings.gradle.kts
+ *     SheetMC Networking: settings.gradle.kts
  *     Copyright (C) 2025 SheetMC.org
  *
  *     This program is free software: you can redistribute it and/or modify
@@ -19,4 +19,4 @@
 plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
 }
-rootProject.name = "SheetMC Protocol"
+rootProject.name = "SheetMC Networking"
