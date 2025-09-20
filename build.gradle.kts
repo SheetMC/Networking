@@ -1,5 +1,5 @@
 /*
- *     SheetMC Protocol: build.gradle.kts
+ *     SheetMC Networking: build.gradle.kts
  *     Copyright (C) 2025 SheetMC.org
  *
  *     This program is free software: you can redistribute it and/or modify
@@ -20,9 +20,10 @@ plugins {
     kotlin("jvm") version "2.2.10"
     kotlin("plugin.serialization") version "2.2.0"
     id("org.jetbrains.dokka") version "2.0.0"
+    id("io.ktor.plugin") version "3.3.0"
 }
 
-group = "org.sheetmc.protocol"
+group = "org.sheetmc.networking"
 version = "0.0.1"
 
 repositories {
@@ -30,6 +31,12 @@ repositories {
 }
 
 dependencies {
+    implementation("io.ktor:ktor-server-core-jvm")
+    implementation("io.ktor:ktor-server-cio")
+    implementation("ch.qos.logback:logback-classic:1.4.15")
+    implementation("io.ktor:ktor-server-core")
+    testImplementation("io.ktor:ktor-server-test-host")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0")
     testImplementation(kotlin("test"))
 }
